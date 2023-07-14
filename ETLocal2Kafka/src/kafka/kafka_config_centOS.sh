@@ -24,7 +24,7 @@ mkdir -p data/kafka
 mkdir -p data/zookeeper
 
 echo 'listeners=PLAINTEXT://:9092' >> config/server.properties
-echo 'advertised.listeners=PLAINTEXT://4.150.185.5:9092' >> config/server.properties
+echo 'advertised.listeners=PLAINTEXT://YOUR-VM's-PUBLIC-IP:9092' >> config/server.properties
 
 export JAVA_HOME="/usr/lib/jvm/jre-1.8.0-openjdk"
 export JRE_HOME="/usr/lib/jvm/jre"
@@ -39,15 +39,31 @@ nohup bin/kafka-server-start.sh config/server.properties &
 
 sleep 10
 
-
-nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic comfama.beneficiarios --bootstrap-server localhost:9092  &
-
-sleep 10
-
-nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic comfama.empresas --bootstrap-server localhost:9092  &
+nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic prueba.customer --bootstrap-server localhost:9092  &
 
 sleep 10
 
-nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic comfama.titulares --bootstrap-server localhost:9092  &
+nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic prueba.date --bootstrap-server localhost:9092  &
 
 sleep 10
+
+nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic prueba.product --bootstrap-server localhost:9092  &
+
+sleep 10
+
+nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic prueba.reseller --bootstrap-server localhost:9092  &
+
+sleep 10
+
+nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic prueba.sales-order --bootstrap-server localhost:9092  &
+
+sleep 10
+
+nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic prueba.sales-terrritory --bootstrap-server localhost:9092  &
+
+sleep 10
+
+nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic prueba.sales --bootstrap-server localhost:9092  &
+
+sleep 10
+
