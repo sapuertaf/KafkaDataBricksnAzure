@@ -1,0 +1,10 @@
+####Listar topicos disponibles#####
+
+bin/kafka-topics.sh --list --bootstrap-server localhost:9092
+
+####Borrar un topico dado#### 
+
+bin/kafka-topics.sh --delete --bootstrap-server YOUR-VM's-PUBLIC-IP:9092 --topic YOUR-TOPIC-NAME
+
+####Crear un topico####
+bin/kafka-topics.sh --create --topic YOUR-TOPIC-NAME --bootstrap-server YOUR-VM's-PUBLIC-IP:9092
