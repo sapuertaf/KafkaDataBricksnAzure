@@ -46,4 +46,8 @@ schema_sales_order = StructType()\
                  .add("SalesOrder",StringType())\
                  .add("SalesOrderLine",IntegerType())
 
-schema_sales_territory = ""
+schema_sales_territory = StructType()\
+                         .add("SalesTerritoryKey",IntegerType())\
+                         .add("Region",StringType())\
+                         .add("Country",StringType())\
+                         .add("Group",StringType())
