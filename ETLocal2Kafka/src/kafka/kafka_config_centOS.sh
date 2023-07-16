@@ -59,7 +59,7 @@ nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic
 
 sleep 10
 
-nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic prueba.sales-terrritory --bootstrap-server localhost:9092  &
+nohup bin/kafka-topics.sh --create --partitions 1 --replication-factor 1 --topic prueba.sales-territory --bootstrap-server localhost:9092  &
 
 sleep 10
 
