@@ -1,5 +1,7 @@
 # Demo Quind en la nube de Azure
 
+[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white)](https://conventionalcommits.org)
+
 Date: 07/08/2023
 
 ### Contenido
@@ -58,7 +60,7 @@ Date: 07/08/2023
 
 El presente documento contiene en detalle la implementación de un proyecto de analítica completo haciendo uso de la arquitectura Data Lake House.
 
-![Diagrama de contexto del sistema.](Demo%20Quind%20en%20la%20nube%20de%20Azure%20fc299097bd3e45ea936c2f0f2ccc1fa7/Modelo_C4_Diagramas_de_arquitectura-Diagrama_de_contexto..drawio.svg)
+![Diagrama de contexto del sistema.](https://raw.githubusercontent.com/sapuertaf/KafkaDataBricksnAzure/c937c9561fb3e8c4165e6e774ca477b04a36ec11/resources/img/Diagrama-contexto-del-sistema.svg)
 
 Diagrama de contexto del sistema.
 
@@ -92,7 +94,7 @@ En este video se detalla la creación de la infraestructura para la implementaci
 
 Primeramente deberemos de levantar la infraestructura especificada en la sección: Lo que construiremos - Recursos usados y explicación.
 
-![Diagrama de despliegue: Infraestructura de Azure usada. ](Demo%20Quind%20en%20la%20nube%20de%20Azure%20fc299097bd3e45ea936c2f0f2ccc1fa7/Diagrama_sin_ttulo-Diagrama_de_despliegue.drawio.svg)
+![Diagrama de despliegue: Infraestructura de Azure usada. ](https://raw.githubusercontent.com/sapuertaf/KafkaDataBricksnAzure/c937c9561fb3e8c4165e6e774ca477b04a36ec11/resources/img/Diagrama-despliegue-Infraestructura-Azure.svg)
 
 Diagrama de despliegue: Infraestructura de Azure usada. 
 
@@ -116,7 +118,7 @@ Para esto accederemos a la máquina virtual creada anteriormente y crearemos los
 
 Para poder tener datos que consumir posteriormente en Databricks, primero debemos de enviar datos desde nuestro computador hasta los tópicos del broker de Kafka (una vez este esté activo).
 
-![Diagrama de componentes: Local a Kafka](Demo%20Quind%20en%20la%20nube%20de%20Azure%20fc299097bd3e45ea936c2f0f2ccc1fa7/Modelo_C4_Diagramas_de_arquitectura-Diagrama_de_componentes__Local_a_Kafka.drawio.svg)
+![Diagrama de componentes: Local a Kafka](https://raw.githubusercontent.com/sapuertaf/KafkaDataBricksnAzure/c937c9561fb3e8c4165e6e774ca477b04a36ec11/resources/img/Diagrama-componentes-Local-Kafka.svg)
 
 Diagrama de componentes: Local a Kafka
 
@@ -147,7 +149,7 @@ Los siguientes son los archivos CSV requeridos para la ejecución:
 
 Leeremos los datos disponibles en los topicos de Kafka para llevarlos a la cuenta de almacenamiento de Azure. 
 
-![Diagrama de componentes: Kafka - Databricks y Storage Account.](Demo%20Quind%20en%20la%20nube%20de%20Azure%20fc299097bd3e45ea936c2f0f2ccc1fa7/Diagrama_sin_ttulo-Diagrama_de_componentes__Kafka_-_Databricks_y_Storage_Account..drawio.svg)
+![Diagrama de componentes: Kafka - Databricks y Storage Account.](https://raw.githubusercontent.com/sapuertaf/KafkaDataBricksnAzure/c937c9561fb3e8c4165e6e774ca477b04a36ec11/resources/img/Diagrama-componentes-Kafka-Databricks-Storage%20Account.svg)
 
 Diagrama de componentes: Kafka - Databricks y Storage Account.
 
@@ -160,7 +162,7 @@ Diagrama de componentes: Kafka - Databricks y Storage Account.
 
 Una vez los datos son almacenados en la cuenta de almacenamiento crearemos vistas haciendo uso de Synapse Analytics para vincular y consultar los datos almacenados en el Data Lake.
 
-![Diagrama de componentes: Storage Account y Synapse Analytics.](Demo%20Quind%20en%20la%20nube%20de%20Azure%20fc299097bd3e45ea936c2f0f2ccc1fa7/Modelo_C4_Diagramas_de_arquitectura-Diagrama_de_componentes_.drawio.svg)
+![Diagrama de componentes: Storage Account y Synapse Analytics.](https://raw.githubusercontent.com/sapuertaf/KafkaDataBricksnAzure/c937c9561fb3e8c4165e6e774ca477b04a36ec11/resources/img/Diagrama-componentes-StorageAccount-SynapseAnalytics.svg)
 
 Diagrama de componentes: Storage Account y Synapse Analytics.
 
@@ -195,6 +197,6 @@ FROM OPENROWSET(
 
 Finalmente, el siguiente diagrama detalla lo construido.
 
-![Diagrama de componentes: Todo el sistema.](Demo%20Quind%20en%20la%20nube%20de%20Azure%20fc299097bd3e45ea936c2f0f2ccc1fa7/Modelo_C4_Diagramas_de_arquitectura-Diagrama_de_componentes__Todo_el_sistema.drawio.svg)
+![Diagrama de componentes: Todo el sistema.](https://raw.githubusercontent.com/sapuertaf/KafkaDataBricksnAzure/c937c9561fb3e8c4165e6e774ca477b04a36ec11/resources/img/Diagrama-componentes-Todo-sistema.svg)
 
 Diagrama de componentes: Todo el sistema.
